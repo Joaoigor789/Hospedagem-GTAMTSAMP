@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SampMTA Pro Hosting</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>SampMTA Pro Hosting</h1>
+    <p class="tagline">Hospedagem rápida, estável e segura para servidores MTA e SAMP</p>
+    <div class="btn-group">
+      <button id="btnRegistrar" class="btn-registrar">Registrar</button>
+      <button id="btnLogin" class="btn-login">Login</button>
+    </div>
+  </header>
+  <main>
+    <section class="planos" id="secPlanos">
+      <h2>Planos de Servidores</h2>
+      <ul>
+        <li>50 slots — <strong>R$10/mês</strong></li>
+      </ul>
+    </section>
+    <section class="contato" id="secContato">
+      <h2>Fale Conosco</h2>
+      <p>Precisa de ajuda ou quer contratar? Clique no botão abaixo para falar no WhatsApp:</p>
+      <a class="whatsapp-link" href="https://wa.me/5538993437321" target="_blank" rel="noopener noreferrer">Chat no WhatsApp</a>
+    </section>
+    <section class="sobre-nos" id="secSobre">
+      <h2>Sobre a SampMTA Pro Hosting</h2>
+      <p>
+        Somos especialistas em hospedagem para servidores de GTA MTA e SAMP.<br />
+        Oferecemos alta performance, proteção contra ataques DDoS e suporte dedicado para sua comunidade de jogadores.
+      </p>
+    </section>
+
+    <section class="cadastro" id="formCadastro" style="display:none;">
+      <h2>Cadastro</h2>
+      <form action="/register" method="POST" id="formRegistro">
+        <div class="form-group">
+          <label for="usuario">Usuário (login):</label>
+          <input type="text" id="usuario" name="usuario" required />
+        </div>
+        <div class="form-group">
+          <label for="senha">Senha:</label>
+          <input type="password" id="senha" name="senha" required />
+        </div>
+
+        <div class="form-group">
+          <label for="primeiroNome">Primeiro nome:</label>
+          <input type="text" id="primeiroNome" name="primeiroNome" required />
+        </div>
+        <div class="form-group">
+          <label for="ultimoNome">Último nome:</label>
+          <input type="text" id="ultimoNome" name="ultimoNome" required />
+        </div>
+        <div class="form-group">
+          <label for="endereco">Endereço:</label>
+          <input type="text" id="endereco" name="endereco" />
+        </div>
+        <div class="form-group">
+          <label for="cidade">Cidade:</label>
+          <input type="text" id="cidade" name="cidade" />
+        </div>
+        <div class="form-group">
+          <label for="estado">Estado:</label>
+          <input type="text" id="estado" name="estado" />
+        </div>
+        <div class="form-group">
+          <label for="pais">País:</label>
+          <select id="pais" name="pais" required>
+            <option value="Brazil" selected>Brazil</option>
+            <option value="Outro">Outro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="cep">Código postal:</label>
+          <input type="text" id="cep" name="cep" />
+        </div>
+        <div class="form-group">
+          <label for="telefoneResidencial">Telefone residencial:</label>
+          <input type="tel" id="telefoneResidencial" name="telefoneResidencial" />
+        </div>
+        <div class="form-group">
+          <label for="celular">Celular:</label>
+          <input type="tel" id="celular" name="celular" />
+        </div>
+        <div class="form-group">
+          <label for="emailPrimario">E-mail primário:</label>
+          <input type="email" id="emailPrimario" name="emailPrimario" required />
+        </div>
+        <div class="form-group">
+          <label for="emailSecundario">Email secundário:</label>
+          <input type="email" id="emailSecundario" name="emailSecundario" />
+        </div>
+        <button type="submit">Enviar</button>
+      </form>
+      <div id="msgResposta" style="margin-top:15px; color:#00ff99;"></div>
+    </section>
+
+    <section class="login" id="formLogin" style="display:none;">
+      <h2>Login</h2>
+      <form action="/login" method="POST" id="formLoginForm">
+        <div class="form-group">
+          <label for="loginUsuario">Usuário:</label>
+          <input type="text" id="loginUsuario" name="usuario" required />
+        </div>
+        <div class="form-group">
+          <label for="loginSenha">Senha:</label>
+          <input type="password" id="loginSenha" name="senha" required />
+        </div>
+        <button type="submit">Entrar</button>
+      </form>
+      <div id="msgLogin" style="margin-top:15px; color:#00ff99;"></div>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 SampMTA Pro Hosting — Todos os direitos reservados.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
